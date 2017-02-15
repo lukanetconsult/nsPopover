@@ -90,6 +90,21 @@ can be loaded through ``path`` to external html template or ``<script>`` tag wit
 
 Also it is possible to use simple strings as template together with ``ns-popover-plain`` option.
 
+### ``ns-popover-template-model {Expression}``
+
+This provides an option to bind a scope expression to retrieve the template (when ns-popover-plain is true) or template url.
+When present it will overwrite the ``ns-popover-template`` property.
+
+```javascript
+// In controller
+$scope.myTemplateUrl = '/assets/templates/foo.html';
+```
+
+```html
+<!-- in template -->
+<div ns-popover="true" ns-popover-template-model="myTemplateUrl"></div>
+```
+
 ### ``ns-popover-plain {Boolean}``
 
 A flag that indicates if the ``ns-popover-template`` is a plain string or not, default: ``false``.

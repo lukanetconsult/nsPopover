@@ -99,6 +99,10 @@
           var unregisterActivePopoverListeners;
           var unregisterDisplayMethod;
 
+          if (attrs.nsPopoverTemplateModel) {
+              options.template = $parse(attrs.nsPopoverTemplateModel)(scope);
+          }
+
           if (options.mouseRelative) {
             options.mouseRelativeX = options.mouseRelative.indexOf('x') !== -1;
             options.mouseRelativeY = options.mouseRelative.indexOf('y') !== -1;
