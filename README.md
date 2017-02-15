@@ -105,6 +105,8 @@ $scope.myTemplateUrl = '/assets/templates/foo.html';
 <div ns-popover="true" ns-popover-template-model="myTemplateUrl"></div>
 ```
 
+**Note:** This is a one-way binding and the expression is not watched.
+
 ### ``ns-popover-plain {Boolean}``
 
 A flag that indicates if the ``ns-popover-template`` is a plain string or not, default: ``false``.
